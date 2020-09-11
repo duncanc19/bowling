@@ -6,7 +6,7 @@ include RSpec
 describe "bowling" do
   context "convert string to array" do
     it "parses string" do
-      expect(Bowling.new.to_array("X X")).to eq(["X", "X"])
+      expect(Bowling.new.to_array("X X X X X X X X X X")).to eq(["X", "X", "X", "X", "X", "X", "X", "X", "X", "X"])
     end
   end
 
