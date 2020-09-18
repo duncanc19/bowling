@@ -23,6 +23,14 @@ describe "bowling" do
     end
   end
 
+  context "check for spare" do
+    it "checks for spares and converts to single slash" do
+      expect(Bowling.new.add_pairs([["1", "/"]])).to eq(["/"])
+    end
+  end
+
+
+
 
 # context "add ints in array" do
 #   it "adds integer pairs together" do

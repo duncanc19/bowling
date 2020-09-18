@@ -23,11 +23,11 @@ class Bowling
   def add_pairs(score_array)
     new_array = []
     score_array.each do |n|
-      new_array.push(n[0].to_i+n[1].to_i)
-      
-      # if n.to_i
-      #   puts "Current number is: #{n}" 
-      # end
+      if n[1] == "/"
+        new_array.push("/")
+      else
+        new_array.push(n[0].to_i+n[1].to_i)
+      end
     end  
     new_array
 
