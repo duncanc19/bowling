@@ -44,6 +44,7 @@ describe "bowling" do
       expect(Bowling.new.get_total_score([7])).to eq(7)
       expect(Bowling.new.get_total_score([5])).to eq(5)
       expect(Bowling.new.get_total_score([5, 8])).to eq(13)
+      expect(Bowling.new.get_total_score([5, 8, 4, 7, 9, 3, 6, 5, 3, 2])).to eq(52)
     end
   end
 
