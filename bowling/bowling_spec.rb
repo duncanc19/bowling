@@ -39,6 +39,14 @@ describe "bowling" do
     end
   end
 
+  context "output whole game" do
+    it "converts input string to total when only numbers" do
+      expect(Bowling.new.get_total_score([7])).to eq(7)
+      expect(Bowling.new.get_total_score([5])).to eq(5)
+      expect(Bowling.new.get_total_score([5, 8])).to eq(13)
+    end
+  end
+
 
 
 

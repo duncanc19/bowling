@@ -35,4 +35,12 @@ class Bowling
 
   end
 
+  def get_total_score(frame_scores)
+    sum = 0
+    frame_scores.each do |i|
+      sum += i
+    end
+    sum
+  end
+  
 end
