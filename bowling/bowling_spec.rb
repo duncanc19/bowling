@@ -31,6 +31,14 @@ describe "bowling" do
     end
   end
 
+  context "check for strike" do
+    it "checks for strikes and converts to 'X'" do
+      expect(Bowling.new.add_pairs([["X"]])).to eq(["X"])
+      expect(Bowling.new.add_pairs([["1", "/"], ["X"]])).to eq(["/", "X"])
+      expect(Bowling.new.add_pairs([["1", "/"], ["5", "2"], ["X"]])).to eq(["/", 7, "X"])
+    end
+  end
+
 
 
 
