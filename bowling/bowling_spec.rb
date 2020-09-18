@@ -26,6 +26,8 @@ describe "bowling" do
   context "check for spare" do
     it "checks for spares and converts to single slash" do
       expect(Bowling.new.add_pairs([["1", "/"]])).to eq(["/"])
+      expect(Bowling.new.add_pairs([["1", "/"], ["5", "/"]])).to eq(["/", "/"])
+      expect(Bowling.new.add_pairs([["1", "/"], ["5", "2"], ["3", "/"]])).to eq(["/", 7, "/"])
     end
   end
 
