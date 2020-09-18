@@ -42,5 +42,19 @@ class Bowling
     end
     sum
   end
-  
+
+  def check_for_spares(score_array)
+    previous_frame_spare = false
+    score_array.each do |frame|
+      if previous_frame_spare == true
+        frame[0] = (frame[0].to_i * 2).to_s
+      end
+      if frame[1] == "/"
+        previous_frame_spare = true
+      else 
+        previous_frame_spare = false
+      end
+    end
+  end
+
 end

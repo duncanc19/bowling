@@ -48,6 +48,12 @@ describe "bowling" do
     end
   end
 
+  context "calculate spares" do
+    it "adds extra spare score" do
+      expect(Bowling.new.check_for_spares([["1", "/"], ["1", "5"]])).to eq([["1", "/"], ["2", "5"]])
+    end
+  end
+
 
 
 
