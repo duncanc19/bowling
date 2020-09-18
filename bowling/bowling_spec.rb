@@ -10,11 +10,25 @@ describe "bowling" do
     end
   end
 
-  context "add ints in array" do
-    it "adds integer pairs together" do
-      expect(Bowling.new.add_pairs(["13", "42"])).to eq([4, 6])
+  context "create sub-arrays" do
+    it "makes sub arrays" do
+      expect(Bowling.new.to_subarray(["13", "72", "42"])).to eq([["1","3"], ["7", "2"], ["4","2"]])
     end
   end
+
+  context "add two numbers" do
+    it "adds two rolls together when both numbers" do
+      expect(Bowling.new.add_pairs([["1","3"]])).to eq([4])
+      expect(Bowling.new.add_pairs([["1","3"], ["7", "2"], ["4","2"]])).to eq([4, 9, 6])
+    end
+  end
+
+
+# context "add ints in array" do
+#   it "adds integer pairs together" do
+#     expect(Bowling.new.add_pairs(["13", "42"])).to eq([4, 6])
+#   end
+# end
 
 end
 
